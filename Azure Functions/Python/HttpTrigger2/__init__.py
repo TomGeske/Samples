@@ -6,6 +6,11 @@ import requests
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
+    from sqlalchemy import Column, Integer, String
+    from sqlalchemy import create_engine
+
+    engine = create_engine('sqlite:///sales.db', echo = True)
+
     response = req.params.get('response')
     if not response:
         try:
