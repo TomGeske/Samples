@@ -14,7 +14,7 @@ variables:
   functionAppName: 'python-demo'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-18.04'
+  vmImageName: 'latest'
 
   # Working Directory
   workingDirectory: '$(System.DefaultWorkingDirectory)/Azure Functions/Python'
