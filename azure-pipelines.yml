@@ -38,6 +38,15 @@ stages:
       workingDirectory: $(workingDirectory)
       displayName: 'Build extensions'
 
+    
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+        script: |
+          # Write your commands here
+      
+          ls -l /lib/x86_64-linux-gnu/
+          
     - task: UsePythonVersion@0
       displayName: 'Use Python 3.8'
       inputs:
